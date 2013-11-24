@@ -7,7 +7,7 @@ var data = new Array();
 for(var i=0;i<total_pixels;i++) {
 	//pixel x
 	for(var c=0;c<3;c++) { //rgb
-		data.push(0); //r,g,b
+		data.push(255); //r,g,b
 	}
 }
 
