@@ -16,9 +16,14 @@ var controllers = 1;
 //universes
 var universes = new Array();
 for(var c=0;c<controllers;c++) {
-	universes.push( artnetclient.createClient('192.168.1.100', 6454, 1) );
-	universes.push( artnetclient.createClient('192.168.1.100', 6454, 2) );
-	universes.push( artnetclient.createClient('192.168.1.100', 6454, 3) );
-	universes.push( artnetclient.createClient('192.168.1.100', 6454, 4) );
+	universes.push( artnetclient.createClient('192.168.0.200', 6454, 1) );
+	// universes.push( artnetclient.createClient('192.168.0.200', 6454, 2) );
+	// universes.push( artnetclient.createClient('192.168.0.200', 6454, 3) );
+	// universes.push( artnetclient.createClient('192.168.0.200', 6454, 4) );
 }
-for(var u=0;u<universes.length;u++) universes[u].send(data);
+for(var u=0;u<universes.length;u++) {
+	// universes[u].send(data);
+	universes[u].discover(function(data) {
+		console.log("data:" + data);
+	});
+}
