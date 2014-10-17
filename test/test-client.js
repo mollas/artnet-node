@@ -24,6 +24,6 @@ for(var c=0;c<controllers;c++) {
 for(var u=0;u<universes.length;u++) {
 	// universes[u].send(data);
 	universes[u].discover(function(data) {
-		console.log("data:" + data);
+		console.log("data:" + data.toString());
 	});
 }
