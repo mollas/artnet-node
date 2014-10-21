@@ -22,8 +22,9 @@ for(var c=0;c<controllers;c++) {
 	// universes.push( artnetclient.createClient('192.168.0.200', 6454, 4) );
 }
 for(var u=0;u<universes.length;u++) {
-	// universes[u].send(data);
+	universes[u].send(data);
 	universes[u].discover(function(data) {
-		console.log("data:" + data.toString());
+		console.log(data);
+		// console.log("data:" + data.name);
 	});
 }
