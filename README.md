@@ -1,3 +1,7 @@
 # artnet-node
 ## Art-Net Library for NodeJS
-##### BrianMMcClain
+
+### Written by (amongst others)
+* Brian McClain
+* Martin Herbst
+* Håkon Nessjøen
