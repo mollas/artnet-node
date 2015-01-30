@@ -21,10 +21,28 @@ for(var c=0;c<controllers;c++) {
 	// universes.push( artnetclient.createClient('192.168.0.200', 6454, 3) );
 	// universes.push( artnetclient.createClient('192.168.0.200', 6454, 4) );
 }
+
+/* sends to 255.255.255.255
+artnetclient.discover(function(err, data) {
+	if (err) {
+		console.log("Discover got error: ", err);
+	} else {
+		console.log("Discovered nodes:", data);
+	}
+});
+*/
+
+// Send request to 192.168.10.255
+artnetclient.discover(function(err, data) {
+	if (err) {
+		console.log("Discover got error: ", err);
+	} else {
+		console.log("Discovered nodes:", data);
+	}
+}, 5000, "192.168.10.255");
+
+
+// Send dmx data
 for(var u=0;u<universes.length;u++) {
 	universes[u].send(data);
-	universes[u].discover(function(data) {
-		console.log(data);
-		// console.log("data:" + data.name);
-	});
 }
