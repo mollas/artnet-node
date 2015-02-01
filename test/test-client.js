@@ -32,16 +32,6 @@ artnetclient.discover(function(err, data) {
 });
 */
 
-// Send request to 192.168.10.255
-artnetclient.discover(function(err, data) {
-	if (err) {
-		console.log("Discover got error: ", err);
-	} else {
-		console.log("Discovered nodes:", data);
-	}
-}, 5000, "192.168.10.255");
-
-
 // Send dmx data
 for(var u=0;u<universes.length;u++) {
 	universes[u].send(data);
