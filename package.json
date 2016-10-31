@@ -20,7 +20,7 @@
   "main": "./main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BrianMMcclain/artnet-node.git"
+    "url": "https://github.com/mollas/artnet-node.git"
   },
   "keywords": [
     "dmx",
